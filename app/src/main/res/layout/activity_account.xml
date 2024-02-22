@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".ui.AccountActivity">
+
+    <EditText
+        android:id="@+id/etCompleteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_rounded_edittext"
+        android:gravity="center"
+        android:hint="Full name"
+        android:inputType="text"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/etMobilePhone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_rounded_edittext"
+        android:gravity="center"
+        android:hint="Mobile Number"
+        android:inputType="phone"
+        app:layout_constraintTop_toBottomOf="@id/etCompleteName"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/etBirthdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etMobilePhone"
+        android:hint="Birthdate (MM/DD/YYYY)"
+        android:inputType="date"
+        android:gravity="center"
+        android:background="@drawable/rectangle_rounded_edittext"/>
+
+    <EditText
+        android:id="@+id/etSeniorCitizenId"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etBirthdate"
+        android:hint="Senior Citizen ID No. (Optional)"
+        android:inputType="text"
+        android:gravity="center"
+        android:visibility="gone"
+        android:background="@drawable/rectangle_rounded_edittext"/>
+
+    <EditText
+        android:id="@+id/etCityMunicipality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etSeniorCitizenId"
+        android:hint="City/Municipality"
+        android:inputType="text"
+        android:gravity="center"
+        android:background="@drawable/rectangle_rounded_edittext"/>
+
+    <EditText
+        android:id="@+id/etBarangay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_rounded_edittext"
+        android:gravity="center"
+        android:hint="Baranggay"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/etCityMunicipality"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/etHouseNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rectangle_rounded_edittext"
+        android:gravity="center"
+        android:hint="Blk No., Lot No., Phase No."
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/etBarangay"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <EditText
+        android:id="@+id/etUsernameReg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/etHouseNo"
+        android:hint="Username"
+        android:inputType="text"
+        android:gravity="center"
+        android:background="@drawable/rectangle_rounded_brown"/>
+
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/etUsernameReg"
+        android:padding="8dp"
+        android:backgroundTint="#13548A"
+        android:textColor="@color/white"
+        android:text="Update"/>
+
+    <Button
+        android:id="@+id/btnCancelRegistration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btnUpdate"
+        android:padding="8dp"
+        android:backgroundTint="#566C7D"
+        android:text="Cancel"
+        android:textColor="@color/white"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:visibility="invisible"
+        android:layout_gravity="center"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
